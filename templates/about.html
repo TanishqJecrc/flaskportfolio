@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Tanishq Singh Flask Portfolio Website
+{% endblock %}
+
+{% block main %}
+
+    <section class="home-content">
+        <div class="row portfolio-row justify-content-center">
+            <div class="col-md-5">
+                <div class="text-center">
+
+                    <h2 class="about-header">My Journey</h2>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="timeline">
+            <div class="container-timeline left">
+                <div class="content">
+                        <h2>2018</h2>
+                            <p><a target="_blank" class="about-link">10th pass from CBSE Board with 88%</a>:
+                                <br>
+                                <ul>
+                                </ul>
+                            </p>
+                </div>
+            </div>
+
+            <div class="container-timeline right">
+                <div class="content">
+                        <h2>2020</h2>
+                            <p>
+                                <a target="_blank" class="about-link">12th pass from CBSE Board with 82%</a><br>
+                                Taken Computer Science as 5th subject and learned python programming language
+                            </p>
+                </div>
+            </div>
+
+            <div class="container-timeline left">
+                <div class="content">
+                        <h2>2021</h2>
+                            Joined Courses and Dual Degrees:
+                            <ul>
+                                <li>
+                                    <a target="_blank" class="about-link" href="https://study.iitm.ac.in/ds/">IITM online B.S. degree in Data Science and programming</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" class="about-link" href="https://jecrcfoundation.com/">BTech degree in Computer Science from JECRC Foundation college (offline)</a>
+                                
+                                </li>
+                            </ul>
+
+                </div>
+            </div>
+            <div class="container-timeline right">
+                <div class="content">
+                        <h2>2022</h2>
+                            <a target="_blank" class="about-link" >During Both dual degrees</a>:
+                            <ul>
+                                <li>Learned python programming and dsa</li>
+                                <li>Learned business management</li>
+                                <li>Nptel course DSA with python</li>
+                                <li>Nptel course DAA</li>
+                                <li>Topper in Nptel course Design Thinking</li>
+                                <li>Nptel course stress management</li>
+                                <li>completed IITM degree foundation level</li>
+                            </ul>
+                </div>
+            </div>
+            <div class="container-timeline left">
+                <div class="content">
+                        <h2>2023</h2>
+                        <a target="_blank" class="about-link"></a><br>
+                        Languages and skill learned:
+                            <ul>
+                                <li>
+                                    Python, Flask
+                                </li>
+                                <li>
+                                    JavaScript, HTML, CSS, Vue
+                                </li>
+                                <li>
+                                    Machine learning concepts
+                                </li>
+                                <li>
+                                    photo editing, video editing, google site, SQL etc.
+                                </li>
+                            </ul>
+
+                </div>
+            </div>
+            <div class="container-timeline right">
+                <div class="content">
+                        <h2>2024</h2>
+                        <a target="_blank" class="about-link" >Hope to complete</a>:
+                            <ul>
+                                <li>machine learning projects</li>
+                                <li>game development</li>
+                                <li>diplomas in IITM degree</li>
+                            </ul>
+                            <a target="_blank" class="about-link" href="/portfolio">Link to my projects</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row portfolio-row justify-content-center">
+            <div class="col-md-8">
+                <hr/>
+            </div>
+        </div>
+
+        <div class="row about-row justify-content-center">
+            <div class="col-12 p-0 text-center">
+                    <h2 class="about-header">My skills:</h2>
+            </div>
+        </div>
+        <div class="row row-legend justify-content-center">
+            <div class="col-12 p-0 text-center">
+                <p>
+                    1 - Basic<span class="about-legend"></span>
+                    2 - Novice<span class="about-legend"></span>
+                    3 - Intermediate
+                </p>
+                <p class="m-0">
+                    4 - Advanced<span class="about-legend"></span>
+                    5 - Expert
+                </p>
+            </div>
+        </div>
+        <div class="row row-legend justify-content-center about-header">
+                Hover cursor over bars for more information
+        </div>
+        <div class="row about-row justify-content-center">
+            {% for topic, one_skill in skills %}
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="skill-cat text-center">
+                    <h5>{{ topic }}</h5>
+                </div>
+                <div class="row">
+                    {% for item in one_skill %}
+                    {% set level = item[1]/5*100 %}
+                    <div class="col-12 text-right">
+                        <p>{{ item[0] }} - {{ item[1] }}</p>
+                        <div class="skill-bar">
+                            <div class="skill-spec" style="width: {{ level }}%;">
+                            </div>
+                            <span class="tooltiptext">{{ item[2] }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
