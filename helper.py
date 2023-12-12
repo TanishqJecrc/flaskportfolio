@@ -98,7 +98,7 @@ apps = [
 # Arcade games
 games = [['CyberPunk 2077',
                 'https://www.cyberpunk.net/us/en/',
-                'static/images/cyberpunk_2077.jpg',
+                'static/images/cyberpunk2077.jpg',
                 '''Cyberpunk 2077 is an action role-playing video game developed by CD Projekt Red and published by CD Projekt. The game is based on the Cyberpunk subgenre of science fiction, which is characterized by a combination of lowlife and high tech, featuring futuristic technological and scientific achievements, such as artificial intelligence and cyberware, juxtaposed with societal collapse, dystopia or decay. The game is set in a dystopian cyberpunk universe, where the player assumes the role of “V”, a mercenary in the fictional Californian city known as “Night City”. The game’s story revolves around a heist gone wrong that results in an experimental cybernetic “bio-chip” containing an engram of the legendary rock star and terrorist Johnny Silverhand (played by Keanu Reeves) threatening to slowly overwrite V’s mind. As the story progresses, V and Johnny must work together to find a way to be separated and save V’s life.
                  '''],
 
